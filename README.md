@@ -175,6 +175,7 @@ Text, CSV or JSON format output
 - `txt` will output text files
 - `json` will output .json files
 - `csv` will output csv
+- `html` will output basic html table report
 
 ### Report Location
 
