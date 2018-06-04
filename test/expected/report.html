@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+    }
+
+    th {
+      background-color: #787878;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #b4b4b4;
+    }
+  </style>
+  
+  <title>Accessibilty Report</title>
+  
+</head>
+
+<body>
+
+  <h1>Accessibility Report</h1>
+
+  <table style="width:100%">
+    <tr>
+      <th>File</th>
+      <th>Heading</th>
+      <th>Issue</th>
+      <th>Element</th>
+      <th>Id</th>
+      <th>Class</th>
+      <th>Ln:Col</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>./test/examples/test.html</td>
+      <td>NOTICE</td>
+      <td>WCAG2A.Principle2.Guideline2_4.2_4_2.H25.2</td>
+      <td>&lt;title&gt;Test One&lt;/title&gt;</td>
+      <td></td>
+      <td></td>
+      <td>4:4</td>
+      <td>Check that the title element describes the document.</td>
+    </tr>
+    <tr>
+      <td>./test/examples/test.html</td>
+      <td>ERROR</td>
+      <td>WCAG2A.Principle3.Guideline3_1.3_1_1.H57.2</td>
+      <td>&lt;html&gt;&lt;head&gt;
+    &lt;title&gt;Test One&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Derp&lt;/h1&gt;
+    &lt;a id="herpDerp" class="test Element" href="test"&gt;Test&lt;/a&gt;
+    &lt;a href="test"&gt;Test&lt;/a&gt;
+    &lt;a href="test" class="herp"&gt;Test&lt;/a&gt;
+  
+
+&lt;/body&gt;&lt;/html&gt;</td>
+      <td></td>
+      <td></td>
+      <td>1:0</td>
+      <td>The html element should have a lang or xml:lang attribute which describes the language of the document.</td>
+    </tr>
+    <tr>
+      <td>./test/examples/test.html</td>
+      <td>NOTICE</td>
+      <td>WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81</td>
+      <td>&lt;a id="herpDerp" class="test Element" href="test"&gt;Test&lt;/a&gt;</td>
+      <td>herpDerp</td>
+      <td>test Element</td>
+      <td>8:4</td>
+      <td>Check that the link text combined with programmatically determined link context identifies the purpose of the link.</td>
+    </tr>
+    <tr>
+      <td>./test/examples/test.html</td>
+      <td>NOTICE</td>
+      <td>WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81</td>
+      <td>&lt;a href="test"&gt;Test&lt;/a&gt;</td>
+      <td></td>
+      <td></td>
+      <td>9:4</td>
+      <td>Check that the link text combined with programmatically determined link context identifies the purpose of the link.</td>
+    </tr>
+    <tr>
+      <td>./test/examples/test.html</td>
+      <td>NOTICE</td>
+      <td>WCAG2A.Principle2.Guideline2_4.2_4_4.H77,H78,H79,H80,H81</td>
+      <td>&lt;a href="test" class="herp"&gt;Test&lt;/a&gt;</td>
+      <td></td>
+      <td>herp</td>
+      <td>10:4</td>
+      <td>Check that the link text combined with programmatically determined link context identifies the purpose of the link.</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

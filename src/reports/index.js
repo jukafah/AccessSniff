@@ -5,6 +5,7 @@ import mkdirp from 'mkdirp';
 import logger from '../logger';
 
 import GenerateReport from './generateReport';
+import GenerateHtml from './generateHtml';
 
 const defaultOptions = {
   fileName: 'report',
@@ -51,6 +52,10 @@ class ReportsGenerator {
         this.report.output = this.reportTxt(reports);
         break;
 
+      case 'html':
+        this.report.output = this.reportHtml(reports);
+        break;
+
     }
 
   }
@@ -65,6 +70,10 @@ class ReportsGenerator {
 
   reportCsv(reports) {
     return GenerateReport(reports, ',');
+  }
+
+  reportHtml(reports) {
+    return GenerateHtml(reports);
   }
 
   writeFile() {

@@ -211,6 +211,7 @@ You can use the CLI component by installing it globally with `npm install -g acc
 sniff test/**/*.html -r json -l reports
 sniff test/**/*.html -r csv -l reports
 sniff test/**/*.html -r txt -l reports
+sniff test/**/*.html -r html -l reports
 ```
 
 ### Options
@@ -218,7 +219,7 @@ sniff test/**/*.html -r txt -l reports
 #### Report Type
 `-r` or `-reportType`
 
-txt, csv, json.
+txt, csv, json, html.
 
 #### Report Location
 `-r` or `-reportLocation`

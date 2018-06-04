@@ -72,6 +72,19 @@ exports.accessibilityTests = {
         test.done();
       });
   },
+  report_HTML: test => {
+    AccessSniff.default(['./test/examples/test.html'], options)
+    .then(report => AccessSniff.report(report, {reportLocation: 'reports', reportType: 'html', force: true}))
+    .then(report => {
+      var writtenReport = fs.readFileSync('./reports/report.html', 'utf8');
+      var expected = fs.readFileSync('./test/expected/report.html', 'utf8');
+
+      test.deepEqual(report, expected, 'Should return HTML report data for test.html');
+      test.deepEqual(writtenReport, expected, 'Should write an HTML report for test.html');
+      test.expect(2);
+      test.done();
+    });
+  },
   report_Error: test => {
     AccessSniff.default(['./test/errors/no-alt.html'], {
       browser: true
